@@ -1,0 +1,39 @@
+{
+    "hello": "Hallo, {{name}}!",
+    "home": {
+        "title": "CAM",
+        "fullTitle": "World Apostolic House",
+        "nav": {
+            "dashboard": "Dashboard",
+            "form-register": "Register"
+        }
+    },
+    "language": {
+        "portuguese": "Portuguese",
+        "spanish": "Spanish",
+        "english": "English",
+        "change": "Language"
+    },
+    "form": {
+        "faithful": {
+            "title": "Register",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "birthDay": "Birth Day",
+            "originCity": "Origin City",
+            "country": "Country",
+            "originNetwork": "How did you find out about CAM?",
+            "createdDate": "Created Date"
+        },
+        "submit": "Submit"
+    },
+    "footer": {
+        "about": "About Us",
+        "social": "Social Media",
+        "contact": "Contact",
+        "links": "Important Links",
+        "aboutDescription": "We are a welcoming community. Come visit us!",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Service Terms"
+    }
+}

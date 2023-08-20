@@ -1,0 +1,39 @@
+{
+    "hello": "Olá, {{name}}!",
+    "home": {
+        "title": "CAM",
+        "fullTitle": "Casa Apostólica Mundial",
+        "nav": {
+            "dashboard": "Dashboard",
+            "form-register": "Registro"
+        }
+    },
+    "language": {
+        "portuguese": "Português",
+        "spanish": "Español",
+        "english": "English",
+        "change": "Idioma"
+    },
+    "form": {
+        "faithful": {
+            "title": "Registro",
+            "fullName": "Nome Completo",
+            "phoneNumber": "Número de Telefone",
+            "birthDay": "Data de Nascimento",
+            "originCity": "Cidade de Origem",
+            "country": "País",
+            "originNetwork": "Como você ficou sabendo da CAM?",
+            "createdDate": "Data de Criação"
+        },
+        "submit": "Enviar"
+    },
+    "footer": {
+        "about": "Sobre Nós",
+        "social": "Redes Sociais",
+        "contact": "Contato",
+        "links": "Links Importantes",
+        "aboutDescription": "Somos uma comunidade acolhedora. Venha nos visitar!",
+        "privacyPolicy": "Política de Privacidade",
+        "termsOfService": "Termos de Serviço"
+    }
+}
