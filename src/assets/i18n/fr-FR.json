@@ -19,13 +19,21 @@
             "title": "Enregistrement",
             "fullName": "Nom Complet",
             "phoneNumber": "Numéro de Téléphone",
-            "birthDay": "Date de Naissance",
+            "birthday": "Date de Naissance",
             "originCity": "Ville d'Origine",
             "country": "Pays",
-            "originNetwork": "Comment avez-vous entendu parler de CAM ?",
+            "originNetwork": "Comment avez-vous entendu parler de CAM?",
             "createdDate": "Date de Création"
         },
         "submit": "Soumettre"
+    },
+    "socialMedia": {
+        "tiktok": "Tiktok",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "relatives": "Famille",
+        "friends": "Amis",
+        "evangelism": "Évangélisation"
     },
     "footer": {
         "about": "À Propos de Nous",

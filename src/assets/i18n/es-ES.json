@@ -19,13 +19,21 @@
             "title": "Registro",
             "fullName": "Nombre Completo",
             "phoneNumber": "Número de Teléfono",
-            "birthDay": "Fecha de Nacimiento",
+            "birthday": "Fecha de Nacimiento",
             "originCity": "Ciudad de Origen",
             "country": "País",
             "originNetwork": "¿Cómo se enteró de CAM?",
             "createdDate": "Fecha de Creación"
         },
         "submit": "Enviar"
+    },
+    "socialMedia": {
+        "tiktok": "Tiktok",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "relatives": "Familiares",
+        "friends": "Amigos",
+        "evangelism": "Evangelismo"
     },
     "footer": {
         "about": "Acerca de Nosotros",

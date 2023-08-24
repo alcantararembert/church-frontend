@@ -1,5 +1,5 @@
 {
-  "name": "CAM frontend",
+  "name": "cam_frontend",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

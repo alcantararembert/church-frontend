@@ -8,6 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './domain/dashboard/dashboard.component';
 import { FaithfulComponent } from './domain/faithful/faithful.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GenericService } from './domain/util/generic-service.service';
+import { FaithfulService } from './domain/faithful/faithful.service';
+import { DashboardService } from './domain/dashboard/dashboard.service';
+import { FooterComponent } from './domain/footer/footer.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -18,6 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     DashboardComponent,
     FaithfulComponent,
+    FooterComponent,  
   ],
   imports: [
     BrowserModule,
@@ -30,9 +36,12 @@ export function createTranslateLoader(http: HttpClient) {
       },
       defaultLanguage: 'pt-BR',
     }),
+    ReactiveFormsModule,
     AppRoutingModule,
   ],
   providers: [
+    DashboardService,
+    FaithfulService
   ],
   bootstrap: [
     AppComponent,
