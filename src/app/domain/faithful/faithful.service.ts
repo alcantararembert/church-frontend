@@ -6,7 +6,7 @@ import { Faithful } from './faithful';
 export class FaithfulService extends GenericService {
 
     public createFaithful(faithful: Faithful) {
-        this.post('faithfulAngular', faithful).subscribe(
+        this.post('faithfulExternal', faithful).subscribe(
             (resp) => {
                 console.log('Post Successful:', resp);
             },
