@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<ngx-charts-pie-chart
+  [results]="data"
+  [view]="view"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendTitle]="legendTitleCountries"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+  (select)="onSelect($event)">
+</ngx-charts-pie-chart>
+<ngx-charts-pie-chart *ngIf="cityData.length  > 0"
+  [results]="cityData"
+  [view]="view"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendTitle]="legendTitleCities"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+  (select)="onSelect($event)">
+</ngx-charts-pie-chart>
