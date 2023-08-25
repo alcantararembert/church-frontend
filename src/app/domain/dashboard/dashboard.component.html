@@ -1,14 +1,14 @@
 <div class="dashboard-container">
 
     <div class="chart-container col-md-6">
-        <ngx-charts-advanced-pie-chart [results]="data" [view]="view" [gradient]="gradient" [scheme]="'fire'"
+        <ngx-charts-advanced-pie-chart [results]="data" [view]="view" [gradient]="gradient" [scheme]="'air'"
             (select)="onSelect($event)">
         </ngx-charts-advanced-pie-chart>
     </div>
 
 
     <div class="chart-container col-md-6" *ngIf="cityData.length > 0">
-        <ngx-charts-pie-grid [results]="cityData" [view]="view" [scheme]="'fire'" (select)="onSelect($event)">
+        <ngx-charts-pie-grid [results]="cityData" [view]="view" [scheme]="'air'" (select)="onSelect($event)">
         </ngx-charts-pie-grid>
     </div>
 

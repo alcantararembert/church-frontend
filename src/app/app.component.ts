@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 export type ViewType = 'faithful' | 'dashboard';
 
@@ -7,7 +7,7 @@ export type ViewType = 'faithful' | 'dashboard';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   view: ViewType = 'faithful';
   isCollapsed = true;
   constructor(public translateService: TranslateService) {}
@@ -28,5 +28,9 @@ export class AppComponent {
 
   toggleView(view: ViewType): void {
     this.view = view;
+  }
+
+  ngOnInit(): void {
+    this.translateService.use('es-ES');
   }
 }

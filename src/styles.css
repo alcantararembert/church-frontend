@@ -1,48 +1,63 @@
-/* Estilizando a estrutura geral */
-.container-fluid {
-    background-color: $background-color;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h3 {
-    color: $primary-color;
-    font-weight: 600;
-    border-bottom: 2px solid $highlight-color;
-    padding-bottom: 10px;
-  }
-  
-  /* Estilizando os botões */
-  .btn-outline-secondary {
-    color: $primary-color;
-    border-color: $highlight-color;
-    transition: background-color 0.3s, color 0.3s;
-  
-    &:hover, 
-    &:focus {
-      background-color: $highlight-color;
-      color: $primary-color;
-      border-color: $primary-color;
-    }
-  }
-  
-  .btn-group-sm .btn.active {
-    background-color: $primary-color;
-    color: $highlight-color;
-    border-color: $primary-color;
-  
-    &:hover, 
-    &:focus {
-      background-color: darken($primary-color, 10%);  // escurece o azul em 10%
-      color: $highlight-color;
-    }
-  }
-  
-  /* Adicionando espaço para a área de botões */
-  .btn-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Se você estiver usando SCSS, o código acima pode ser adicionado ao seu arquivo SCSS. 
-  Caso contrário, remova as variáveis e use as cores diretamente no arquivo CSS. */
-  
+/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+/* Reset básico */
+body, h1, h2, h3, p, a, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F2F2F2;
+    color: #17139C;
+}
+
+/* Cabeçalhos */
+h1, h2, h3 {
+    color: #17139C;
+}
+
+/* Links e botões */
+a, button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.primary, button.primary {
+    background-color: #17139C;
+    color: #FFF;
+}
+
+a.primary:hover, button.primary:hover {
+    background-color: #0f0d7a;
+}
+
+a.secondary, button.secondary {
+    background-color: #DD3E3E;
+    color: #FFF;
+}
+
+a.secondary:hover, button.secondary:hover {
+    background-color: #c03333;
+}
+
+/* Mensagens e destaques */
+.notification {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFE5E1;
+    color: #DD3E3E;
+}
+
+/* Container geral */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+/* Você pode continuar a definir outros estilos conforme necessário */
