@@ -1,6 +1,6 @@
 <h2>{{ 'form.faithful.title' | translate }}</h2>
 <!-- <form method="POST" [formGroup]="faithfulForm" class="faithful-form" (submit)="onSubmit()" autocomplete="off"> -->
-<form [formGroup]="faithfulForm" class="faithful-form" (submit)="onSubmit()">
+  <form [formGroup]="faithfulForm" class="faithful-form mx-auto" (submit)="onSubmit()">
   <div class="form-group">
     <label for="fullName">{{ 'form.faithful.fullName' | translate }}</label>
     <input type="text" id="fullName" name="fullName" formControlName="fullName" required>
@@ -40,6 +40,6 @@
   </div>
 
   <!-- <button type="submit" class="btn btn-sm btn-outline-secondary" [disabled]="!faithfulForm.valid">{{ 'form.submit' | translate }}</button> -->
-  <button type="submit" class="btn btn-sm btn-outline-secondary">{{ 'form.submit' | translate }}</button>
+  <button type="submit" class="btn">{{ 'form.submit' | translate }}</button>
   <!-- <p>Form Value: {{ faithfulForm.value | json }}</p> -->
 </form>

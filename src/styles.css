@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+/* Estilizando a estrutura geral */
+.container-fluid {
+    background-color: $background-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: $primary-color;
+    font-weight: 600;
+    border-bottom: 2px solid $highlight-color;
+    padding-bottom: 10px;
+  }
+  
+  /* Estilizando os botões */
+  .btn-outline-secondary {
+    color: $primary-color;
+    border-color: $highlight-color;
+    transition: background-color 0.3s, color 0.3s;
+  
+    &:hover, 
+    &:focus {
+      background-color: $highlight-color;
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+  
+  .btn-group-sm .btn.active {
+    background-color: $primary-color;
+    color: $highlight-color;
+    border-color: $primary-color;
+  
+    &:hover, 
+    &:focus {
+      background-color: darken($primary-color, 10%);  // escurece o azul em 10%
+      color: $highlight-color;
+    }
+  }
+  
+  /* Adicionando espaço para a área de botões */
+  .btn-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Se você estiver usando SCSS, o código acima pode ser adicionado ao seu arquivo SCSS. 
+  Caso contrário, remova as variáveis e use as cores diretamente no arquivo CSS. */
+  

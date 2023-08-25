@@ -1,22 +1,15 @@
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<div class="dashboard-container">
 
-<ngx-charts-pie-chart
-  [results]="data"
-  [view]="view"
-  [gradient]="gradient"
-  [legend]="showLegend"
-  [legendTitle]="legendTitleCountries"
-  [labels]="showLabels"
-  [doughnut]="isDoughnut"
-  (select)="onSelect($event)">
-</ngx-charts-pie-chart>
-<ngx-charts-pie-chart *ngIf="cityData.length  > 0"
-  [results]="cityData"
-  [view]="view"
-  [gradient]="gradient"
-  [legend]="showLegend"
-  [legendTitle]="legendTitleCities"
-  [labels]="showLabels"
-  [doughnut]="isDoughnut"
-  (select)="onSelect($event)">
-</ngx-charts-pie-chart>
+    <div class="chart-container col-md-6">
+        <ngx-charts-advanced-pie-chart [results]="data" [view]="view" [gradient]="gradient" [scheme]="'fire'"
+            (select)="onSelect($event)">
+        </ngx-charts-advanced-pie-chart>
+    </div>
+
+
+    <div class="chart-container col-md-6" *ngIf="cityData.length > 0">
+        <ngx-charts-pie-grid [results]="cityData" [view]="view" [scheme]="'fire'" (select)="onSelect($event)">
+        </ngx-charts-pie-grid>
+    </div>
+
+</div>

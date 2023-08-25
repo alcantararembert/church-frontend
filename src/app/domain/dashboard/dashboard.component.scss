@@ -1,0 +1,26 @@
+$primary-color: #17139C;
+$secondary-color: #DD3E3E;
+$highlight-color: #FFE5E1;
+$background-color: #F2F2F2;
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+    ngx-charts-pie-chart {
+        margin-bottom: 20px;
+    }
+}
+
+// Estilos responsivos para telas menores
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+}

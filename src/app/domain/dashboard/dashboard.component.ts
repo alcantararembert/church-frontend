@@ -24,13 +24,14 @@ export class DashboardComponent implements OnInit {
   showLegend: boolean = true;
   showLabels: boolean = true;
   isDoughnut: boolean = false;
+  explodeSlices: boolean = false;
   legendTitleCountries: string = "Países";
   legendTitleCities: string = "Cidades";
   view: [number, number] = [700, 400];
 
   data: any[] = [];
   cityData: any[] = [];
-
+  
 
   constructor(private dashboardService: DashboardService){}
 
