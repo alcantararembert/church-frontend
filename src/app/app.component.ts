@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
 export type ViewType = 'faithful' | 'dashboard';
 
 @Component({
@@ -10,22 +9,24 @@ export type ViewType = 'faithful' | 'dashboard';
 })
 export class AppComponent {
   view: ViewType = 'faithful';
-
+  isCollapsed = true;
   constructor(public translateService: TranslateService) {}
 
   public changeLanguage(language: string): void {
     this.translateService.use(language);
   }
 
-  get showFaithful() {
-    return this.view === 'faithful'
+
+
+  get showFaithful(): boolean {
+    return this.view === 'faithful';
   }
 
-  get showDashboard() {
-    return this.view === 'dashboard'
+  get showDashboard(): boolean {
+    return this.view === 'dashboard';
   }
 
-  toggleView(view: ViewType) {
-    this.view = view
+  toggleView(view: ViewType): void {
+    this.view = view;
   }
 }

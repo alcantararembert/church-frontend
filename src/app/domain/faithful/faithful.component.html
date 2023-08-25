@@ -1,34 +1,36 @@
-<h2>{{ 'form.faithful.title' | translate }}</h2>
-<!-- <form method="POST" [formGroup]="faithfulForm" class="faithful-form" (submit)="onSubmit()" autocomplete="off"> -->
-  <form [formGroup]="faithfulForm" class="faithful-form mx-auto" (submit)="onSubmit()">
-  <div class="form-group">
-    <label for="fullName">{{ 'form.faithful.fullName' | translate }}</label>
-    <input type="text" id="fullName" name="fullName" formControlName="fullName" required>
-  </div>
+<h2 class="text-center">{{ 'form.faithful.title' | translate }}</h2>
 
-  <div class="form-group">
-    <label for="phoneNumber">{{ 'form.faithful.phoneNumber' | translate }}</label>
-    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="\(\d{2}\)\s?\d{4,5}\-\d{4}" formControlName="phoneNumber" required>
-  </div>
+<form [formGroup]="faithfulForm" class="faithful-form mx-auto" (submit)="onSubmit()">
+  <div class="card mx-auto w-75">
+    <div class="form-group">
+      <label for="fullName">{{ 'form.faithful.fullName' | translate }}</label>
+      <input type="text" id="fullName" name="fullName" formControlName="fullName" required>
+    </div>
 
-  <div class="form-group">
-    <label for="birthday">{{ 'form.faithful.birthday' | translate }}</label>
-    <input type="date" id="birthday" name="birthday" formControlName="birthday" required>
-  </div>
+    <div class="form-group">
+      <label for="phoneNumber">{{ 'form.faithful.phoneNumber' | translate }}</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" pattern="\(\d{2}\)\s?\d{4,5}\-\d{4}"
+        formControlName="phoneNumber" required>
+    </div>
 
-  <div class="form-group">
-    <label for="originCity">{{ 'form.faithful.originCity' | translate }}</label>
-    <input type="text" id="originCity" name="originCity" formControlName="originCity">
-  </div>
+    <div class="form-group">
+      <label for="birthday">{{ 'form.faithful.birthday' | translate }}</label>
+      <input type="date" id="birthday" name="birthday" formControlName="birthday" required>
+    </div>
 
-  <div class="form-group">
-    <label for="country">{{ 'form.faithful.country' | translate }}</label>
-    <input type="text" id="country" name="country" formControlName="country" required>
-  </div>
+    <div class="form-group">
+      <label for="originCity">{{ 'form.faithful.originCity' | translate }}</label>
+      <input type="text" id="originCity" name="originCity" formControlName="originCity">
+    </div>
 
-  <div class="form-group">
-    <label for="originNetwork">{{ 'form.faithful.originNetwork' | translate }}</label>
-    <select id="originNetwork" name="originNetwork" formControlName="originNetwork" required>
+    <div class="form-group">
+      <label for="country">{{ 'form.faithful.country' | translate }}</label>
+      <input type="text" id="country" name="country" formControlName="country" required>
+    </div>
+
+    <div class="form-group">
+      <label for="originNetwork">{{ 'form.faithful.originNetwork' | translate }}</label>
+      <select id="originNetwork" name="originNetwork" formControlName="originNetwork" required>
         <option value="" disabled selected>Selecionar...</option>
         <option value="TIKTOK">{{ 'socialMedia.tiktok' | translate }}</option>
         <option value="FACEBOOK">{{ 'socialMedia.facebook' | translate }}</option>
@@ -36,10 +38,9 @@
         <option value="FAMILIAR">{{ 'socialMedia.relatives' | translate }}</option>
         <option value="AMIGOS">{{ 'socialMedia.friends' | translate }}</option>
         <option value="EVANGELISMO">{{ 'socialMedia.evangelism' | translate }}</option>
-    </select>
-  </div>
+      </select>
+    </div>
 
-  <!-- <button type="submit" class="btn btn-sm btn-outline-secondary" [disabled]="!faithfulForm.valid">{{ 'form.submit' | translate }}</button> -->
-  <button type="submit" class="btn">{{ 'form.submit' | translate }}</button>
-  <!-- <p>Form Value: {{ faithfulForm.value | json }}</p> -->
+    <button type="submit" class="btn">{{ 'form.submit' | translate }}</button>
+  </div>
 </form>

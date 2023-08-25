@@ -47,7 +47,50 @@ $background-color: #F2F2F2;
   .btn-group {
     margin-bottom: 20px;
   }
-  
+  $primary-color: #17139C;
+$secondary-color: #DD3E3E;
+$highlight-color: #FFE5E1;
+$background-color: #F2F2F2;
+
+.main-container {
+  .title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  .btn-group-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .view-toggle, .language-toggle {
+      display: flex;
+      gap: 10px;
+      
+      button[type="button"] {
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+        }
+      }
+    }
+  }
+
+  .content-section {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    .btn-group-section {
+      flex-direction: column;
+    }
+  }
+}
+
   /* Se você estiver usando SCSS, o código acima pode ser adicionado ao seu arquivo SCSS. 
   Caso contrário, remova as variáveis e use as cores diretamente no arquivo CSS. */
   

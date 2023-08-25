@@ -1,15 +1,26 @@
 <div class="container-fluid py-3">
   <h3>{{ 'form.faithful.title' | translate }}</h3>
-  <div class="btn-group btn-group-sm py-5">
-    <button type="button" class="btn btn-sm btn-outline-secondary" (click)="toggleView('faithful')" [class.active]="view === 'faithful'">{{ 'home.nav.form-register' | translate }}</button>
-    <button type="button" class="btn btn-sm btn-outline-secondary" (click)="toggleView('dashboard')" [class.active]="view !== 'faithful'">{{ 'home.nav.dashboard' | translate }}</button>
-  </div>
 
-  <div class="btn-group btn-group-sm py-5">
-      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('pt-BR')" [class.active]="!translateService.currentLang || translateService.currentLang === 'pt-BR'">Português</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" [class.active]="translateService.currentLang === 'en-US'">English</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('es-ES')" [class.active]="translateService.currentLang === 'es-ES'">Español</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Francés</button>
+  <!-- Menu de navegação principal -->
+  <div class="d-flex justify-content-between py-5">
+      <!-- Botões de navegação -->
+      <div class="btn-group btn-group-sm">
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="toggleView('faithful')" [class.active]="view === 'faithful'">{{ 'home.nav.form-register' | translate }}</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="toggleView('dashboard')" [class.active]="view !== 'faithful'">{{ 'home.nav.dashboard' | translate }}</button>
+      </div>
+
+      <div class="btn-group btn-group-sm" dropdown>
+        <button dropdownToggle type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            {{ translateService.currentLang | uppercase }}
+        </button>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" (click)="changeLanguage('pt-BR')" [class.active]="!translateService.currentLang || translateService.currentLang === 'pt-BR'">Português</button>
+          <button class="dropdown-item" (click)="changeLanguage('en-US')" [class.active]="translateService.currentLang === 'en-US'">English</button>
+          <button class="dropdown-item" (click)="changeLanguage('es-ES')" [class.active]="translateService.currentLang === 'es-ES'">Español</button>
+          <button class="dropdown-item" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Francés</button>
+        </div>
+    </div>
+
   </div>
 </div>
 

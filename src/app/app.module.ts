@@ -14,7 +14,8 @@ import { DashboardService } from './domain/dashboard/dashboard.service';
 import { FooterComponent } from './domain/footer/footer.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
-
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,6 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     NgxChartsModule,
     HttpClientModule,
+    [CollapseModule.forRoot()],
+    BsDropdownModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
