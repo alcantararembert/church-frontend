@@ -5,9 +5,10 @@ $background-color: #F2F2F2;
 
 .faithful-form {
   background-color: $background-color;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 
   .form-group {
     margin-bottom: 20px;

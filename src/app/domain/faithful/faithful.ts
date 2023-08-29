@@ -11,5 +11,5 @@ export class Faithful {
   @Input() originCity: String = '';
   @Input() country: String = '';
   @Input() originNetwork: String = '';
-  createdDate: String = '';
+  // createdDate: String = '';
 }

@@ -35,7 +35,7 @@ export class FaithfulComponent {
     this.faithful.originCity = this.faithfulForm.value.originCity;
     this.faithful.country = this.faithfulForm.value.country;
     this.faithful.originNetwork = this.faithfulForm.value.originNetwork;
-    this.faithful.createdDate = this.getCurrentDateTime();
+    // this.faithful.createdDate = this.getCurrentDateTime();
     this.faithfulService.createFaithful(this.faithful);
     console.log(this.faithful);
   }
