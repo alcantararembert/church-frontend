@@ -10,8 +10,9 @@
     },
     "language": {
         "portuguese": "Português",
-        "spanish": "Español",
-        "english": "English",
+        "spanish": "Espanhol",
+        "english": "Inglês",
+        "french": "Francês",
         "change": "Idioma"
     },
     "form": {

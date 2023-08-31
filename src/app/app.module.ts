@@ -16,6 +16,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { NavBarComponent } from './domain/nav-bar/nav-bar.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,7 +27,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     DashboardComponent,
     FaithfulComponent,
-    FooterComponent
+    FooterComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

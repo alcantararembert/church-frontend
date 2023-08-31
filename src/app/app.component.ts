@@ -12,25 +12,8 @@ export class AppComponent implements OnInit{
   isCollapsed = true;
   constructor(public translateService: TranslateService) {}
 
-  public changeLanguage(language: string): void {
-    this.translateService.use(language);
-  }
-
-
-
-  get showFaithful(): boolean {
-    return this.view === 'faithful';
-  }
-
-  get showDashboard(): boolean {
-    return this.view === 'dashboard';
-  }
-
-  toggleView(view: ViewType): void {
-    this.view = view;
-  }
-
   ngOnInit(): void {
     this.translateService.use('es-ES');
   }
+  
 }
