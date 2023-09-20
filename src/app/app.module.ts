@@ -12,8 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FaithfulService } from './domain/faithful/faithful.service';
 import { DashboardService } from './domain/dashboard/dashboard.service';
 import { FooterComponent } from './domain/footer/footer.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgxChartsModule} from "@swimlane/ngx-charts";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { NavbarComponent } from './domain/navbar/navbar.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -23,6 +24,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     DashboardComponent,
     FaithfulComponent,
     FooterComponent

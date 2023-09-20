@@ -2,46 +2,55 @@ $primary-color: #17139C;
 $secondary-color: #DD3E3E;
 $highlight-color: #FFE5E1;
 $background-color: #F2F2F2;
+$background-color-opacity: #F2F2F290;
 
 .faithful-form {
+  background-image: url('../../../assets/images/world-background-blue.png');
+  background-size: cover;
   background-color: $background-color;
-  padding: 20px;
+  width: 100%;
+
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  .form-group {
-    margin-bottom: 20px;
-    
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 8px;
-      color: $primary-color;
-    }
+  form {
+    padding: 16px 8px 24px 8px;
+    background-color: $background-color-opacity;
 
-    input, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid $primary-color;
-      border-radius: 5px;
-      &:focus {
-        border-color: $secondary-color;
-        outline: none;
-        box-shadow: 0 0 5px $highlight-color;
+    .form-group {
+      margin-bottom: 20px;
+      
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        color: $primary-color;
+      }
+  
+      input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        &:focus {
+          border-color: $secondary-color;
+          outline: none;
+          box-shadow: 0 0 5px $highlight-color;
+        }
       }
     }
-  }
-
-  button[type="submit"] {
-    background-color: $primary-color;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
+  
+    button[type="submit"] {
+      background-color: $primary-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
     }
   }
 }

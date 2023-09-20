@@ -1,0 +1,15 @@
+$primary-color: #17139C;
+$highlight-color: #FFE5E1;
+
+.footer {
+	display: block;
+	background-color: $primary-color;
+	color: $highlight-color;
+}
+
+
+.fam-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url('../../../assets/images/logo.png');
+}

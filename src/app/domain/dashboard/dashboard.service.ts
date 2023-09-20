@@ -5,15 +5,18 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class DashboardService extends GenericService {
-  public getChartCountryData(): Observable<any[]> {
-    return this.get('dashboardExternal/country/list').pipe(
-      map(response => response.countryResult)
-    );
+
+  public getExternalUrl(url: string): Observable<any> {
+    return this.http.get(url);
   }
 
-  public getChartCityData(city:string): Observable<any[]> {
-    return this.get('dashboardExternal/country/'+city).pipe(
-      map(response => response.countryResult)
-    );
+  public getChartCountryData(country?: string): Observable<any[]> {
+    let url = `https://church-crm-598d06c84097.herokuapp.com/dashboardExternal/country/list`;
+    return this.getExternalUrl(url).pipe(map(response => response.countryResult));
+  }
+
+  public getChartCityData(city: string): Observable<any[]> {
+    const url = 'https://church-crm-598d06c84097.herokuapp.com/dashboardExternal/country/' + city;
+    return this.getExternalUrl(url).pipe(map(response => response.countryResult));
   }
 }

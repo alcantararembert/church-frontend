@@ -1,3 +1,5 @@
+@import "~font-awesome/css/font-awesome.css";
+
 $primary-color: #17139C;
 $secondary-color: #DD3E3E;
 $highlight-color: #FFE5E1;
@@ -41,13 +43,34 @@ $background-color: #F2F2F2;
       background-color: darken($primary-color, 10%);  // escurece o azul em 10%
       color: $highlight-color;
     }
+
+    .sub-navigation {
+      display: block;
+      background-color: red;
+      height: 40px;
+    }
   }
   
   /* Adicionando espaço para a área de botões */
   .btn-group {
     margin-bottom: 20px;
   }
+
+  .world-bg {
+    background-image: url('./../assets/images/world-background-blue.png');
+    background-repeat: round;
+  }
   
+  .faithful-form {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 20px;
+  
+    @media (min-width: 768px) {
+      width: 60vh; 
+      margin: 0 auto; 
+    }
+  }
   /* Se você estiver usando SCSS, o código acima pode ser adicionado ao seu arquivo SCSS. 
   Caso contrário, remova as variáveis e use as cores diretamente no arquivo CSS. */
   

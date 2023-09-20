@@ -1,17 +1,12 @@
 import { GenericService } from '../util/generic-service.service';
 import { Injectable } from '@angular/core';
 import { Faithful } from './faithful';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class FaithfulService extends GenericService {
 
-    public createFaithful(faithful: Faithful) {
-        this.post('faithfulExternal', faithful).subscribe(
-            (resp) => {
-                console.log('Post Successful:', resp);
-            },
-            (error) => {
-                console.error('Post Error:', error);
-        });
-    }
+	createFaithful(faithful: Faithful): Observable<any> {
+		return this.post('faithfulExternal', faithful);
+	}
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 export type ViewType = 'faithful' | 'dashboard';
@@ -9,23 +10,21 @@ export type ViewType = 'faithful' | 'dashboard';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  view: ViewType = 'faithful';
 
-  constructor(public translateService: TranslateService) {}
+  constructor(
+    public translateService: TranslateService,
+    public readonly router: Router
+  ) { }
 
   public changeLanguage(language: string): void {
     this.translateService.use(language);
   }
 
-  get showFaithful() {
-    return this.view === 'faithful'
+  getActiveView(view: ViewType): boolean {
+    return this.router.url.includes(view);
   }
 
-  get showDashboard() {
-    return this.view === 'dashboard'
-  }
-
-  toggleView(view: ViewType) {
-    this.view = view
+  toggleView(view: ViewType): void {
+    this.router.navigate([`/${view}`]);
   }
 }

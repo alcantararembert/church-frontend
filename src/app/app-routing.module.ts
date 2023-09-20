@@ -4,8 +4,9 @@ import { DashboardComponent } from './domain/dashboard/dashboard.component';
 import { FaithfulComponent } from './domain/faithful/faithful.component';
 
 const routes: Routes = [
-  {path : 'dashboard', component: DashboardComponent},
-  {path : 'faithful', component: FaithfulComponent},
+  { path: 'faithful', component: FaithfulComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/faithful', pathMatch: 'full' }
 ];
 
 @NgModule({
